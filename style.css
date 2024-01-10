@@ -1,0 +1,155 @@
+/* Estilos Generales */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: #605e5c; /* Un tono gris cálido */
+    background-color: #faf8f5; /* Un color de fondo suave y claro */
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: #d4af37; /* Un tono dorado */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos del Menú de Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+}
+
+/* Estilos del Carrusel */
+#carrusel {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    overflow-x: auto; /* Para desplazamiento horizontal */
+    padding: 20px;
+    height: 100vh; /* Altura del carrusel (ajustar según sea necesario) */
+}
+
+.carrusel-img {
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan */
+    margin: 0 auto; /* Margen automático para centrar cada imagen */
+    display: flex; /* Usar flexbox para alineación */
+    align-items: center; /* Alineación vertical de las imágenes en cada 'slide' */
+    justify-content: center; /* Alineación horizontal de las imágenes en cada 'slide' */
+}
+
+.carrusel-img img {
+    max-height: 80vh; /* Limita la altura de las imágenes */
+    object-fit: contain; /* Asegura que se muestre la imagen completa */
+}
+
+/* Estilos de la Galería */
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilos de la Galería */
+#galeria .foto {
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+}
+
+#galeria .foto img {
+    border: 1px solid black; /* Aplica el borde directamente a la imagen */
+    max-width: 95%; /* Asegura que la imagen se ajuste al ancho */
+    max-height: 95%; /* Asegura que la imagen se ajuste a la altura */
+    object-fit: scale-down; /* Asegura que la imagen se escale adecuadamente dentro del contenedor */
+}
+
+#galeria .foto:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(212, 175, 55, 0.9); /* Color de fondo del modal con transparencia */
+}
+
+.contenidoModal {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.cerrarModal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #faf8f5; /* Color contrastante para el botón de cerrar */
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos de la Sección de Contacto */
+#contacto {
+    background-color: #fff0db; /* Un tono pastel claro */
+    color: #605e5c;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos del Footer */
+footer {
+    font-size: 0.8em;
+    padding: 10px 0;
+}
+
+/* Media Queries para Responsividad */
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .carrusel-img {
+        width: 100%;
+    }
+
+  #galeria .foto {
+    max-width: 150px; /* Reducción del tamaño del contenedor en pantallas más pequeñas */
+}
+
+    .contenidoModal, .cerrarModal {
+        width: 90%;
+        max-width: 400px;
+    }
+}
