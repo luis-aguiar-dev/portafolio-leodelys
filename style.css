@@ -120,13 +120,32 @@ nav a {
 
 /* Estilos de la Sección de Información del Modelo */
 
+#info-modelo {
+    background-color: #fff; /* Fondo claro */
+    color: #333; /* Color de texto oscuro */
+    padding: 20px;
+    text-align: center; /* Centra el texto */
+    margin: 20px 0;
+}
+
 #info-modelo h2 {
     margin-top: 0;
-    font-size: 1.5em; /* Tamaño de fuente para el título */
+    font-size: 2em; /* Tamaño de fuente más grande para el título */
 }
 
 #info-modelo p {
-    font-size: 1em; /* Tamaño de fuente para el texto */
+    font-size: 1.7em; /* Tamaño de fuente estándar para los párrafos */
+    margin: 10px 0; /* Espaciado entre líneas de texto */
+}
+
+#info-modelo a {
+    color: #d4af37; /* Color que coincida con el esquema del sitio, por ejemplo, dorado */
+    text-decoration: none; /* Sin subrayado para el enlace */
+}
+
+#info-modelo .fab.fa-instagram {
+    color: #d4af37; /* Color del ícono de Instagram */
+    margin-right: 5px; /* Espaciado entre el ícono y el texto */
 }
 
 /* Estilos de la Sección de Contacto */
@@ -145,7 +164,6 @@ footer {
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
-    /* ... (ajustes para responsividad) ... */
     .carrusel-img {
         width: 100%; /* Asegura que cada imagen ocupe el ancho completo del carrusel */
     }
@@ -158,5 +176,13 @@ footer {
         /* ... (ajustes para modal en pantallas pequeñas) ... */
         width: 90%;
         max-width: 400px;
+    }
+
+    #info-modelo h2 {
+        font-size: 1.2em;
+    }
+
+    #info-modelo p {
+        font-size: 1em;
     }
 }
