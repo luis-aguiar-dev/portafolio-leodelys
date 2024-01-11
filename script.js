@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Manejo del carrusel
     let carrusel = document.getElementById('carrusel');
     let imagenes = carrusel.getElementsByClassName('carrusel-img');
     let indiceActual = 0;
@@ -9,9 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
             indiceActual = indice;
         }
     }
-});
 
-document.addEventListener("DOMContentLoaded", function() {
+    // Si hay un problema con la desaparición de la primera imagen en modo responsivo,
+    // considera llamar a desplazarCarrusel() aquí para ajustar la posición inicial.
+
+    // Manejo de la galería y el modal
     let fotos = document.querySelectorAll('.foto');
     let modal = document.getElementById("modalGaleria");
     let imagenModal = document.getElementById("imagenModal");
@@ -21,16 +24,16 @@ document.addEventListener("DOMContentLoaded", function() {
         foto.onclick = function() {
             modal.style.display = "block";
             imagenModal.src = this.dataset.imagen;
-        }
+        };
     });
 
     cerrarModal.onclick = function() {
         modal.style.display = "none";
-    }
+    };
 
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
-    }
+    };
 });
