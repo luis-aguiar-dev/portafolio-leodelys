@@ -185,4 +185,14 @@ footer {
     #info-modelo p {
         font-size: 1em;
     }
+
+@media (max-width: 480px) {
+        .carrusel-img img {
+            max-height: 60vh; /* Reduce la altura máxima en dispositivos pequeños */
+            width: 90%;
+            object-fit: contain;
+            align-items: center;
+        }
+    }
+    
 }
