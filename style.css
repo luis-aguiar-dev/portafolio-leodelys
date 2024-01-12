@@ -7,11 +7,42 @@ body {
     background-color: #faf8f5;
 }
 
-.container-header, .container-footer {
-    background-color: #d4af37;
+.container-header {
+    background-color: #fff0db;
     color: white;
     text-align: center;
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Alineación vertical de los elementos */
+    justify-content: center;
+}
+
+.container-header h1 {
+    margin: 0 20px; /* Espaciado alrededor del nombre */
+    font-size: 2.5em; /* Tamaño del título */
+    color: #333;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 2.4em;
+}
+
+.social-links a:hover {
+    color: #d4af37; /* Cambia el color al pasar el mouse */
 }
 
 /* Estilos del Menú de Navegación */
@@ -125,18 +156,15 @@ body {
     margin: 20px 0;
 }
 
-.model-info-title {
-    margin-top: 0;
-    font-size: 2.5em; /* Aumenta el tamaño de fuente para pantallas grandes */
-}
-
 .model-info-text {
+    font-family: 'Playfair Display', serif;
     font-size: 1.7em; /* Ajusta el tamaño de fuente para pantallas grandes */
     margin: 10px 0;
 }
 
 .model-info-link {
-    color: #605e5c;
+    font-family: 'Playfair Display', serif;
+    color: #333;
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
     font-size: 1.7em; /* Ajusta el tamaño de fuente del enlace para pantallas grandes */
@@ -158,6 +186,12 @@ body {
 
 .instagram-icon:hover, .instagram-icon:focus {
     color: #605e5c;
+}
+
+.contact-section .fas.fa-envelope {
+    margin-right: 10px; /* Espaciado entre el ícono y el texto */
+    color: #d4af37; /* Color del ícono, ajusta según tu esquema de color */
+    font-size: 1.5em; /* Tamaño del ícono */
 }
 
 /* Estilos de la Sección de Contacto */
@@ -200,9 +234,17 @@ body {
 /* Media Queries para Responsividad */
 
 @media (max-width: 1024px) {
-    .model-info-title {
-        font-size: 2em; /* Tamaño para tablets y dispositivos más pequeños */
+
+      .modal-content {
+        max-width: 95%;
+        max-height: 95vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
     }
+    
 
     .model-info-text {
         font-size: 1.5em; /* Tamaño para tablets y dispositivos más pequeños */
@@ -214,9 +256,28 @@ body {
     .model-info-link {
         font-size: 1.5em; /* Tamaño para tablets y dispositivos más pequeños */
     }
+
+    .contact-section .fas.fa-envelope {
+        margin-right: 10px; /* Espaciado entre el ícono y el texto */
+        color: #d4af37; /* Color del ícono, ajusta según tu esquema de color */
+        font-size: 1.2em; /* Tamaño del ícono */
+    }
 }
 
 @media (max-width: 768px) {
+
+    .container-header h1 {
+        margin: 0 20px; /* Espaciado alrededor del nombre */
+        font-size: 1.8em; /* Tamaño del título */
+        color: #333;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+        color: #333;
+        font-size: 1.9em;
+    }
+ 
     .carrusel-container {
         justify-content: flex-start; /* Reestablece la alineación para pantallas más grandes si es necesario */
     }
@@ -237,13 +298,19 @@ body {
         max-width: 150px;
     }
 
+    .modal-content {
+        max-width: 95%;
+        max-height: 95vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     .modal-content, .modal-close {
         width: 90%;
         max-width: 400px;
-    }
-
-    .model-info-title {
-        font-size: 1.5em; /* Tamaño reducido para dispositivos móviles */
     }
 
     .model-info-text {
@@ -262,19 +329,47 @@ body {
         font-size: 1.5em;
     }
 
-    .contact-section a {
+    /* .contact-section a {
         font-size: 1em;
-    }
+    } */
 
+    .contact-section .fas.fa-envelope {
+        margin-right: 10px; /* Espaciado entre el ícono y el texto */
+        color: #d4af37; /* Color del ícono, ajusta según tu esquema de color */
+        font-size: 1.3em; /* Tamaño del ícono */
+    }    
 }
 
 @media (max-width: 480px) {
+
+    .container-header h1 {
+        margin: 0 20px; /* Espaciado alrededor del nombre */
+        font-size: 1.4em; /* Tamaño del título */
+        color: #333;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+        color: #333;
+        font-size: 1.4em;
+    }
     .carrusel-img img {
         max-height: 60vh;
         width: 99%;
         margin-top: 5px;
         align-items: center;
     }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 95vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     .model-info-title {
         font-size: 1.2em; /* Tamaño más pequeño para pantallas muy pequeñas */
     }
@@ -297,5 +392,11 @@ body {
 
     .contact-section a {
         font-size: 1em;
+    }
+
+    .contact-section .fas.fa-envelope {
+        margin-right: 10px; /* Espaciado entre el ícono y el texto */
+        color: #d4af37; /* Color del ícono, ajusta según tu esquema de color */
+        font-size: 0.8em; /* Tamaño del ícono */
     }
 }
