@@ -11,95 +11,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header class="container-header">
         <nav>
-            <ul>
-                <li><a href="#carrusel">Portafolio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="#carrusel">Portafolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="carrusel">
-            <!-- Asegúrate de que las imágenes y rutas sean correctas -->
+        <section class="carrusel-container" id="carrusel">
             <div class="carrusel-img"><img src="/WEBP/01.webp"></div>
             <div class="carrusel-img"><img src="/WEBP/02.webp"></div>
             <div class="carrusel-img"><img src="/WEBP/03.webp"></div>
             <!-- Más imágenes aquí -->
         </section>
 
-        <section id="info-modelo">
-            <h2>Leodelys Loreto</h2>
-            <p>HEIGHT: 5' 7" | BUST: 36" | WAIST: 29" | HIPS: 36" | HAIR: Dark Brown | EYES: Brown | SHOE: 7,5</p>
-            <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/LEODELYSL" target="_blank">@LEODELYSL</a></p>
+        <section class="model-info" id="info-modelo">
+            <h2 class="model-info-title">Leodelys Loreto</h2>
+            <p class="model-info-text">HEIGHT: 5' 7" | BUST: 36" | WAIST: 29" | HIPS: 36" | HAIR: Dark Brown | EYES: Brown | SHOE: 7,5</p>
+            <p><i class="fab fa-instagram instagram-icon"></i> <a class="model-info-link" href="https://www.instagram.com/LEODELYSL" target="_blank">@LEODELYSL</a></p>
             <!-- Más información aquí -->
-        
         </section>
-        <section id="galeria">
-            <div class="foto" data-imagen="/WEBP/04.webp">
-                <img src="/WEBP/04.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/05.webp">
-                <img src="/WEBP/05.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/06.webp">
-                <img src="/WEBP/06.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/07.webp">
-                <img src="/WEBP/07.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/08.webp">
-                <img src="/WEBP/08.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/09.webp">
-                <img src="/WEBP/09.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/10.webp">
-                <img src="/WEBP/10.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/11.webp">
-                <img src="/WEBP/11.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/12.webp">
-                <img src="/WEBP/12.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/13.webp">
-                <img src="/WEBP/13.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/14.webp">
-                <img src="/WEBP/14.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/15.webp">
-                <img src="/WEBP/15.webp">
-            </div>
-            <div class="foto" data-imagen="/WEBP/16.webp">
-                <img src="/WEBP/16.webp">
-            </div>
-            <!-- Más imágenes aquí -->
-        </section>
-        
-        <!-- Modal para la vista de galería -->
-        <div id="modalGaleria" class="modal">
-            <span class="cerrarModal">&times;</span>
-            <img class="contenidoModal" id="imagenModal">
-        </div>
-        
+
+        <section class="gallery-container" id="galeria">
+            <div class="gallery-photo" data-imagen="/WEBP/04.webp"><img src="/WEBP/04.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/05.webp"><img src="/WEBP/05.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/06.webp"><img src="/WEBP/06.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/07.webp"><img src="/WEBP/07.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/08.webp"><img src="/WEBP/08.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/09.webp"><img src="/WEBP/09.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/10.webp"><img src="/WEBP/10.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/11.webp"><img src="/WEBP/11.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/12.webp"><img src="/WEBP/12.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/13.webp"><img src="/WEBP/13.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/14.webp"><img src="/WEBP/14.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/15.webp"><img src="/WEBP/15.webp"></div>
+            <div class="gallery-photo" data-imagen="/WEBP/16.webp"><img src="/WEBP/16.webp"></div>
             <!-- Más fotos aquí -->
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Correo electrónico: modelo@example.com</p>
+        <!-- Modal para la vista de galería -->
+        <div class="modal" id="modalGaleria">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" id="imagenModal">
+        </div>
+
+        <section class="contact-section" id="contacto">
+            <h2 class="contact-section-title">Contacto</h2>
+            <p class="contact-section-text"><a href="mailto:Leloretocontact@gmail.com">Leloretocontact@gmail.com</a></p>
             <!-- Otros detalles de contacto o un formulario aquí -->
         </section>
     </main>
 
-    <footer>
+    <footer class="container-footer">
         <!-- Información del pie de página -->
     </footer>
 
-    <!-- Asegúrate de que la ruta al archivo JavaScript sea correcta -->
     <script src="script.js"></script>
 </body>
 </html>

@@ -3,69 +3,69 @@ body {
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    color: #605e5c; /* Un tono gris cálido */
-    background-color: #faf8f5; /* Un color de fondo suave y claro */
-    box-sizing: border-box;
+    color: #605e5c;
+    background-color: #faf8f5;
 }
 
-header, footer {
-    background-color: #d4af37; /* Un tono dorado */
+.container-header, .container-footer {
+    background-color: #d4af37;
     color: white;
     text-align: center;
     padding: 10px 0;
 }
 
 /* Estilos del Menú de Navegación */
-nav ul {
+.nav-list {
     list-style: none;
     padding: 0;
 }
 
-nav ul li {
+.nav-item {
     display: inline;
     margin-right: 20px;
 }
 
-nav a {
+.nav-link {
     color: white;
     text-decoration: none;
     font-size: 35px;
 }
 
 /* Estilos del Carrusel */
-#carrusel {
+.carrusel-container {
     display: flex;
+    justify-content: center; /* Alinea los elementos del carrusel horizontalmente al centro */
     overflow-x: auto;
     padding: 20px;
     scroll-snap-type: x mandatory;
 }
 
 .carrusel-img {
-    flex: 0 0 auto; /* Evita que las imágenes se reduzcan */
-    margin-right: 10px; /* Espaciado entre imágenes */
+    flex: 0 0 auto;
+    margin: 0 10px; /* Añade margen a ambos lados de cada imagen */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .carrusel-img:last-child {
-    margin-right: 0; /* Elimina margen derecho en la última imagen */
+    margin-right: 0;
 }
 
 .carrusel-img img {
-    max-height: 80vh; /* Limita la altura de las imágenes */
-    object-fit: contain; /* Asegura que se muestre la imagen completa */
+    max-height: 80vh;
+    object-fit: contain;
 }
 
 /* Estilos de la Galería */
-#galeria {
+.gallery-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
 }
 
-#galeria .foto {
+.gallery-photo {
     margin: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -73,13 +73,13 @@ nav a {
     max-width: 300px;
 }
 
-#galeria .foto img {
+.gallery-photo img {
     width: 95%;
-    border: 1.5px solid black; /* Borde de la imagen */
-    object-fit: scale-down; /* Escala la imagen adecuadamente */
+    border: 1.5px solid black;
+    object-fit: scale-down;
 }
 
-#galeria .foto:hover {
+.gallery-photo:hover {
     transform: scale(1.05);
 }
 
@@ -93,22 +93,20 @@ nav a {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Color de fondo del modal con transparencia */
+    background-color: rgba(0, 0, 0, 0.8);
     align-items: center;
 }
 
-.contenidoModal {
-    max-width: 99%; /* Ancho máximo de la imagen */
-    max-height: 99vh; /* Altura máxima de la imagen */
-    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+.modal-content {
+    max-width: 99%;
+    max-height: 99vh;
     margin: auto;
     display: block;
     width: 80%;
-    object-fit: contain;
     align-items: center;
 }
 
-.cerrarModal {
+.modal-close {
     position: absolute;
     top: 20px;
     right: 35px;
@@ -119,80 +117,185 @@ nav a {
 }
 
 /* Estilos de la Sección de Información del Modelo */
-
-#info-modelo {
-    background-color: #fff; /* Fondo claro */
-    color: #333; /* Color de texto oscuro */
+.model-info {
+    background-color: #fff0db;
+    color: #333;
     padding: 20px;
-    text-align: center; /* Centra el texto */
+    text-align: center;
     margin: 20px 0;
 }
 
-#info-modelo h2 {
+.model-info-title {
     margin-top: 0;
-    font-size: 2em; /* Tamaño de fuente más grande para el título */
+    font-size: 2.5em; /* Aumenta el tamaño de fuente para pantallas grandes */
 }
 
-#info-modelo p {
-    font-size: 1.7em; /* Tamaño de fuente estándar para los párrafos */
-    margin: 10px 0; /* Espaciado entre líneas de texto */
+.model-info-text {
+    font-size: 1.7em; /* Ajusta el tamaño de fuente para pantallas grandes */
+    margin: 10px 0;
 }
 
-#info-modelo a {
-    color: #d4af37; /* Color que coincida con el esquema del sitio, por ejemplo, dorado */
-    text-decoration: none; /* Sin subrayado para el enlace */
+.model-info-link {
+    color: #605e5c;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 1.7em; /* Ajusta el tamaño de fuente del enlace para pantallas grandes */
+    vertical-align: middle;
 }
 
-#info-modelo .fab.fa-instagram {
-    color: #d4af37; /* Color del ícono de Instagram */
-    margin-right: 5px; /* Espaciado entre el ícono y el texto */
+.model-info-link:hover, .model-info-link:focus {
+    transform: scale(1.05);
+    color: #d4af37;
+}
+
+.instagram-icon {
+    color: #d4af37;
+    margin-right: 5px;
+    transition: color 0.3s ease;
+    font-size: 1.5em; /* Ajusta el tamaño del ícono para pantallas grandes */
+    vertical-align: middle;
+}
+
+.instagram-icon:hover, .instagram-icon:focus {
+    color: #605e5c;
 }
 
 /* Estilos de la Sección de Contacto */
-#contacto {
-    background-color: #fff0db; /* Un tono pastel claro */
+.contact-section {
+    background-color: #fff0db;
     color: #605e5c;
     padding: 20px;
     text-align: center;
 }
 
+.contact-section-title {
+    font-size: 2.3em; /* Tamaño de fuente para el título de la sección */
+    color: #605e5c; /* Color del título para coincidir con el esquema del sitio */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.contact-section-text {
+    font-size: 1.2em; /* Tamaño de fuente para el texto */
+    margin-bottom: 10px; /* Espaciado entre líneas de texto */
+}
+
+.contact-section a {
+    color: #605e5c; /* Color que coincida con el esquema del sitio */
+    font-size: 1.6em; /* Tamaño de fuente similar al de otros enlaces */
+    text-decoration: none; /* Sin subrayado para el enlace */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y transformación */
+}
+
+.contact-section a:hover, .contact-section a:focus {
+    color:#d4af37; /* Cambia el color al hacer hover */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+}
+
 /* Estilos del Footer */
-footer {
+.footer {
     font-size: 0.8em;
     padding: 10px 0;
 }
 
 /* Media Queries para Responsividad */
+
+@media (max-width: 1024px) {
+    .model-info-title {
+        font-size: 2em; /* Tamaño para tablets y dispositivos más pequeños */
+    }
+
+    .model-info-text {
+        font-size: 1.5em; /* Tamaño para tablets y dispositivos más pequeños */
+    }
+    .instagram-icon {
+        font-size: 1.2em; /* Tamaño para tablets y dispositivos más pequeños */
+    }
+
+    .model-info-link {
+        font-size: 1.5em; /* Tamaño para tablets y dispositivos más pequeños */
+    }
+}
+
 @media (max-width: 768px) {
+    .carrusel-container {
+        justify-content: flex-start; /* Reestablece la alineación para pantallas más grandes si es necesario */
+    }
+
     .carrusel-img {
-        width: 100%; /* Asegura que cada imagen ocupe el ancho completo del carrusel */
+        width: 100%;
+    }
+    
+    .carrusel-img:first-child {
+        margin-left: auto; /* Centra el primer elemento del carrusel */
     }
 
-    #galeria .foto {
-        max-width: 150px; /* Ajuste para imágenes de galería en pantallas pequeñas */
+    .carrusel-img:last-child {
+        margin-right: auto; /* Centra el último elemento del carrusel */
     }
 
-    .contenidoModal, .cerrarModal {
-        /* ... (ajustes para modal en pantallas pequeñas) ... */
+    .gallery-photo {
+        max-width: 150px;
+    }
+
+    .modal-content, .modal-close {
         width: 90%;
         max-width: 400px;
     }
 
-    #info-modelo h2 {
-        font-size: 1.2em;
+    .model-info-title {
+        font-size: 1.5em; /* Tamaño reducido para dispositivos móviles */
     }
 
-    #info-modelo p {
+    .model-info-text {
+        font-size: 1.2em; /* Tamaño reducido para dispositivos móviles */
+    }
+
+    .instagram-icon {
+        font-size: 1em; /* Tamaño reducido para dispositivos móviles */
+    }
+
+    .model-info-link {
+        font-size: 1.2em; /* Tamaño reducido para dispositivos móviles */
+    }
+
+    .contact-section-title {
+        font-size: 1.5em;
+    }
+
+    .contact-section a {
         font-size: 1em;
     }
 
+}
+
 @media (max-width: 480px) {
-        .carrusel-img img {
-            max-height: 60vh; /* Reduce la altura máxima en dispositivos pequeños */
-            width: 90%;
-            object-fit: contain;
-            align-items: center;
-        }
+    .carrusel-img img {
+        max-height: 60vh;
+        width: 99%;
+        margin-top: 5px;
+        align-items: center;
     }
-    
+    .model-info-title {
+        font-size: 1.2em; /* Tamaño más pequeño para pantallas muy pequeñas */
+    }
+
+    .model-info-text {
+        font-size: 1em; /* Tamaño más pequeño para pantallas muy pequeñas */
+    }
+
+    .instagram-icon {
+        font-size: 0.8em; /* Tamaño más pequeño para pantallas muy pequeñas */
+    }
+
+    .model-info-link {
+        font-size: 1em; /* Tamaño más pequeño para pantallas muy pequeñas */
+    }
+
+    .contact-section-title, .contact-section-text {
+        font-size: 1.2em;
+    }
+
+    .contact-section a {
+        font-size: 1em;
+    }
 }
