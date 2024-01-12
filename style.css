@@ -102,8 +102,8 @@ body {
     max-height: 99vh;
     margin: auto;
     display: block;
-    width: 80%;
     align-items: center;
+    object-fit: contain;
 }
 
 .modal-close {
