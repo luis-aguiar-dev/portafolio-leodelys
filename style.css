@@ -1,15 +1,16 @@
 /* Estilos Generales */
+
 body {
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    color: #605e5c;
-    background-color: #faf8f5;
+    color: #333; /* Cambiado a gris oscuro */
+    background-color: #f5f5f5; /* Cambiado a gris claro */
 }
 
 .container-header {
-    background-color: #fff0db;
-    color: white;
+    background-color: #eaeaea; /* Cambiado a gris claro */
+    color: #333; /* Cambiado a gris oscuro */
     text-align: center;
     padding: 10px 0;
     display: flex;
@@ -19,14 +20,14 @@ body {
 
 .header-content {
     display: flex;
-    align-items: center; /* Alineación vertical de los elementos */
+    align-items: center;
     justify-content: center;
 }
 
 .container-header h1 {
-    margin: 0 20px; /* Espaciado alrededor del nombre */
-    font-size: 2.5em; /* Tamaño del título */
-    color: #333;
+    margin: 0 20px;
+    font-size: 2.5em;
+    color: #333; /* Gris oscuro */
 }
 
 .social-links {
@@ -37,15 +38,16 @@ body {
 
 .social-links a {
     margin: 0 10px;
-    color: #333;
+    color: #333; /* Gris oscuro */
     font-size: 2.4em;
 }
 
 .social-links a:hover {
-    color: #d4af37; /* Cambia el color al pasar el mouse */
+    color: #d4af37; /* Dorado para hover */
 }
 
 /* Estilos del Menú de Navegación */
+
 .nav-list {
     list-style: none;
     padding: 0;
@@ -63,9 +65,10 @@ body {
 }
 
 /* Estilos del Carrusel */
+
 .carrusel-container {
     display: flex;
-    justify-content: center; /* Alinea los elementos del carrusel horizontalmente al centro */
+    justify-content: center;
     overflow-x: auto;
     padding: 20px;
     scroll-snap-type: x mandatory;
@@ -73,7 +76,7 @@ body {
 
 .carrusel-img {
     flex: 0 0 auto;
-    margin: 0 10px; /* Añade margen a ambos lados de cada imagen */
+    margin: 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,6 +92,7 @@ body {
 }
 
 /* Estilos de la Galería */
+
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -115,6 +119,7 @@ body {
 }
 
 /* Estilos del Modal */
+
 .modal {
     display: none;
     position: fixed;
@@ -147,19 +152,48 @@ body {
     cursor: pointer;
 }
 
+/* Estilos para los botones del modal con íconos minimalistas */
+
+.modal button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Tamaño de los íconos */
+}
+
+.modal button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.modal .fa-arrow-right, .modal .fa-arrow-left {
+    color: #333; /* Color de los íconos */
+}
+
+.modal .fa-arrow-right {
+    right: 10px;
+}
+
+.modal .fa-arrow-left {
+    left: 10px;
+}
+
 /* Estilos de la Sección de Información del Modelo */
+
 .model-info {
-    background-color: #fff0db;
-    color: #333;
+    background-color: #eaeaea; /* Cambiado a gris claro */
+    color: #333; /* Cambiado a gris oscuro */
     padding: 20px;
     text-align: center;
     margin: 20px 0;
 }
 
 .model-info-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.7em; /* Ajusta el tamaño de fuente para pantallas grandes */
+    font-size: 1.7em;
     margin: 10px 0;
+    vertical-align: middle;
 }
 
 .model-info-link {
@@ -167,68 +201,73 @@ body {
     color: #333;
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
-    font-size: 1.7em; /* Ajusta el tamaño de fuente del enlace para pantallas grandes */
+    font-size: 1.7em;
     vertical-align: middle;
 }
 
 .model-info-link:hover, .model-info-link:focus {
     transform: scale(1.05);
-    color: #d4af37;
+    color: #d4af37; /* Dorado para hover */
 }
 
 .instagram-icon {
-    color: #d4af37;
+    color: #333;
     margin-right: 5px;
     transition: color 0.3s ease;
-    font-size: 1.5em; /* Ajusta el tamaño del ícono para pantallas grandes */
+    font-size: 1.8em;
     vertical-align: middle;
 }
 
 .instagram-icon:hover, .instagram-icon:focus {
-    color: #605e5c;
+    color: #d4af37;
 }
 
 .contact-section .fas.fa-envelope {
-    margin-right: 10px; /* Espaciado entre el ícono y el texto */
-    color: #d4af37; /* Color del ícono, ajusta según tu esquema de color */
-    font-size: 1.5em; /* Tamaño del ícono */
+    color: #d4af37;
+    font-size: 1.5em;
 }
 
 /* Estilos de la Sección de Contacto */
+
 .contact-section {
-    background-color: #fff0db;
-    color: #605e5c;
+    background-color: #eaeaea; /* Cambiado a gris claro */
+    color: #333; /* Cambiado a gris oscuro */
     padding: 20px;
     text-align: center;
 }
 
 .contact-section-title {
-    font-size: 2.3em; /* Tamaño de fuente para el título de la sección */
-    color: #605e5c; /* Color del título para coincidir con el esquema del sitio */
-    margin-bottom: 20px; /* Espaciado debajo del título */
+    font-size: 2.3em;
+    margin-bottom: 20px;
 }
 
 .contact-section-text {
-    font-size: 1.2em; /* Tamaño de fuente para el texto */
-    margin-bottom: 10px; /* Espaciado entre líneas de texto */
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 .contact-section a {
-    color: #605e5c; /* Color que coincida con el esquema del sitio */
-    font-size: 1.6em; /* Tamaño de fuente similar al de otros enlaces */
-    text-decoration: none; /* Sin subrayado para el enlace */
-    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y transformación */
+    color: #333;
+    font-size: 1.6em;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-section a:hover, .contact-section a:focus {
-    color:#d4af37; /* Cambia el color al hacer hover */
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+    color: #d4af37; /* Dorado para hover */
+    transform: scale(1.05);
+
 }
 
 /* Estilos del Footer */
-.footer {
-    font-size: 0.8em;
+
+.site-footer {
+    background-color: #eaeaea; /* Color de fondo gris claro para coincidir con el sitio */
+    color: #333; /* Color de texto gris oscuro */
+    font-size: 1.2em;
     padding: 10px 0;
+    text-align: center; /* Centrar el contenido del footer */
+    font-family: 'Playfair Display', serif; /* Asegúrate de que la fuente coincida con el sitio */
 }
 
 /* Media Queries para Responsividad */
@@ -329,15 +368,20 @@ body {
         font-size: 1.5em;
     }
 
-    /* .contact-section a {
+    .contact-section a {
         font-size: 1em;
-    } */
+    }
 
     .contact-section .fas.fa-envelope {
         margin-right: 10px; /* Espaciado entre el ícono y el texto */
         color: #d4af37; /* Color del ícono, ajusta según tu esquema de color */
-        font-size: 1.3em; /* Tamaño del ícono */
-    }    
+        font-size: 1em; /* Tamaño del ícono */
+        vertical-align: middle;
+    }
+    
+    .site-footer {
+        font-size: 0.7em; /* Tamaño de fuente ligeramente más grande para pantallas más pequeñas */
+    }
 }
 
 @media (max-width: 480px) {
@@ -388,15 +432,22 @@ body {
 
     .contact-section-title, .contact-section-text {
         font-size: 1.2em;
+        vertical-align: middle;
     }
 
     .contact-section a {
         font-size: 1em;
+        vertical-align: middle;
     }
 
     .contact-section .fas.fa-envelope {
         margin-right: 10px; /* Espaciado entre el ícono y el texto */
         color: #d4af37; /* Color del ícono, ajusta según tu esquema de color */
-        font-size: 0.8em; /* Tamaño del ícono */
+        font-size: 0.6em; /* Tamaño del ícono */
+        vertical-align: middle;
+    }
+
+    .site-footer {
+        font-size: 0.6em; /* Tamaño de fuente ligeramente más grande para pantallas más pequeñas */
     }
 }

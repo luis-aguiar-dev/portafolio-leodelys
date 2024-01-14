@@ -1,56 +1,61 @@
-// Escuchar el evento de carga del DOM para asegurarse de que el HTML esté completamente cargado
 document.addEventListener("DOMContentLoaded", function() {
-
-    // Manejo del carrusel
-    // Obtiene el contenedor del carrusel por su ID
-    let carrusel = document.getElementById('carrusel');
-
-    // Obtiene todas las imágenes dentro del carrusel (con la clase 'carrusel-img')
-    let imagenes = carrusel.getElementsByClassName('carrusel-img');
-
-    // Variable para mantener el índice de la imagen actualmente visible en el carrusel
-    let indiceActual = 0;
-
-    // Función para desplazar el carrusel a la imagen seleccionada
-    function desplazarCarrusel(indice) {
-        // Verifica si el índice está dentro del rango de imágenes disponibles
-        if (indice >= 0 && indice < imagenes.length) {
-            // Desplaza el carrusel horizontalmente para mostrar la imagen seleccionada
-            carrusel.scrollLeft = imagenes[indice].offsetLeft;
-            // Actualiza el índice actual con el nuevo índice
-            indiceActual = indice;
-        }
-    }
-
     // Manejo de la galería y el modal
-    // Obtiene todas las fotos de la galería por su clase
-    let fotos = document.querySelectorAll('.gallery-photo');
-
-    // Obtiene el modal y los elementos relacionados por ID o clase
+    let fotos = document.querySelectorAll('.gallery-photo img');
+    let imagenes = Array.from(fotos).map(img => img.src);
+    let indiceActual = 0;
     let modal = document.getElementById("modalGaleria");
     let imagenModal = document.getElementById("imagenModal");
     let cerrarModal = document.getElementsByClassName("modal-close")[0];
 
-    // Añade un evento de clic a cada foto de la galería
-    fotos.forEach(function(foto) {
-        foto.onclick = function() {
-            // Muestra el modal al hacer clic en una foto
+    // Mostrar imagen en el modal
+    function mostrarImagen(indice) {
+        if (indice >= 0 && indice < imagenes.length) {
+            imagenModal.src = imagenes[indice];
+            indiceActual = indice;
+        }
+    }
+
+    // Navegación de imágenes
+    function siguienteImagen() {
+        if (indiceActual < imagenes.length - 1) {
+            mostrarImagen(indiceActual + 1);
+        }
+    }
+
+    function anteriorImagen() {
+        if (indiceActual > 0) {
+            mostrarImagen(indiceActual - 1);
+        }
+    }
+
+    // Eventos para cada foto de la galería
+    fotos.forEach((foto, indice) => {
+        foto.onclick = () => {
             modal.style.display = "block";
-            // Cambia la fuente de la imagen en el modal para que coincida con la imagen seleccionada
-            imagenModal.src = this.dataset.imagen;
+            mostrarImagen(indice);
         };
     });
 
-    // Añade un evento de clic al botón de cierre del modal
-    cerrarModal.onclick = function() {
-        // Oculta el modal cuando se hace clic en el botón de cierre
+    // Cerrar el modal
+    cerrarModal.onclick = () => {
         modal.style.display = "none";
     };
 
-    // Cierra el modal al hacer clic fuera de la imagen
-    window.onclick = function(event) {
+    window.onclick = (event) => {
         if (event.target == modal) {
             modal.style.display = "none";
         }
     };
+
+    // Crear y añadir botones de navegación en el modal
+    let modalSiguiente = document.createElement("button");
+    modalSiguiente.innerHTML = "<i class='fas fa-arrow-right'></i>"; // Ícono de flecha derecha
+    modalSiguiente.onclick = siguienteImagen;
+
+    let modalAnterior = document.createElement("button");
+    modalAnterior.innerHTML = "<i class='fas fa-arrow-left'></i>"; // Ícono de flecha izquierda
+    modalAnterior.onclick = anteriorImagen;
+
+    modal.appendChild(modalAnterior);
+    modal.appendChild(modalSiguiente);
 });
