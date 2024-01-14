@@ -1,6 +1,6 @@
 /* Estilos Generales */
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     color: #333; /* Cambiado a gris oscuro */
@@ -25,7 +25,7 @@ body {
 
 .container-header h1 {
     margin: 0 20px;
-    font-size: 2.5em;
+    font-size: 2.8em;
     color: #333; /* Gris oscuro */
 }
 
@@ -56,6 +56,7 @@ body {
 }
 
 /* Estilos de la Galería */
+
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -74,7 +75,7 @@ body {
 .gallery-photo img {
     width: 95%;
     border: 1.5px solid black;
-    object-fit: scale-down;
+    object-fit: contain;
 }
 
 .gallery-photo:hover {
@@ -165,7 +166,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 35px; /* Espacio aumentado entre los enlaces */
+    gap: 4%; /* Espacio aumentado entre los enlaces */
 }
 
 .model-info a, .model-info .fa-instagram, .model-info .fa-envelope {
@@ -193,14 +194,14 @@ body {
     font-size: 1.2em;
     padding: 10px 0;
     text-align: center; /* Centrar el contenido del footer */
-    font-family: 'Playfair Display', serif; /* Asegúrate de que la fuente coincida con el sitio */
+    font-family: 'Poppins', sans-serif; /* Asegúrate de que la fuente coincida con el sitio */
 }
 
 /* Media Queries para Responsividad */
 
 @media (max-width: 768px) {
 .container-header h1 {
-    font-size: 1.8em;
+    font-size: 2em;
 }
 
 .carrusel-container {
@@ -213,6 +214,17 @@ body {
 
 .gallery-photo {
     max-width: 150px;
+    vertical-align: middle;
+}
+
+.modal-content {
+    max-width: 95%;
+    max-height: 95vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .modal-content, .modal-close {
@@ -228,6 +240,13 @@ body {
     font-size: 1.3em;
 }
 
+.social-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4%; /* Espacio aumentado entre los enlaces */
+}
+
 .social-contact a, .social-contact .fa-instagram, .social-contact .fa-envelope {
     font-size: 0.8em; /* Tamaño reducido para enlaces e íconos */
 }
@@ -241,20 +260,30 @@ body {
 }
 
 .container-header h1 {
-    font-size: 1.4em;
+    font-size: 1.8em;
 }
 
 .carrusel-img img {
     max-height: 60vh;
 }
 
+.modal-content {
+    max-width: 95%;
+    max-height: 95vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .gallery-photo {
-    max-width: 100%; /* Cambiar para que cada foto ocupe el ancho completo */
+    max-width: 95%; /* Cambiar para que cada foto ocupe el ancho completo */
     margin: 0 auto; /* Centrar la imagen en el contenedor */
 }
 
 .gallery-photo img {
-    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    width: 95%; /* La imagen ocupa todo el ancho del contenedor */
 }
 
 .site-footer {
@@ -263,6 +292,13 @@ body {
 
 .model-info {
     font-size: 1em;
+}
+
+.social-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4%; /* Espacio aumentado entre los enlaces */
 }
 
 .social-contact a, .social-contact .fa-instagram, .social-contact .fa-envelope {
