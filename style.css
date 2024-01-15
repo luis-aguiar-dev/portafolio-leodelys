@@ -1,6 +1,6 @@
 /* Estilos Generales */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     color: #333; /* Cambiado a gris oscuro */
@@ -29,7 +29,13 @@ body {
     color: #333; /* Gris oscuro */
 }
 
+.nombre-h1 {
+    letter-spacing: 1.3rem;
+    word-spacing: 3rem;
+}
+
 /* Estilos del Carrusel */
+
 .carrusel-container {
     display: flex;
     justify-content: center;
@@ -115,34 +121,6 @@ body {
     cursor: pointer;
 }
 
-/* Estilos para los botones del modal con íconos minimalistas */
-
-.modal button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 24px; /* Tamaño de los íconos */
-}
-
-.modal button:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.modal .fa-arrow-right, .modal .fa-arrow-left {
-    color: #333; /* Color de los íconos */
-}
-
-.modal .fa-arrow-right {
-    right: 10px;
-}
-
-.modal .fa-arrow-left {
-    left: 10px;
-}
-
 /* Estilos de la Sección de Información del Modelo */
 
 .model-info {
@@ -194,7 +172,7 @@ body {
     font-size: 1.2em;
     padding: 10px 0;
     text-align: center; /* Centrar el contenido del footer */
-    font-family: 'Poppins', sans-serif; /* Asegúrate de que la fuente coincida con el sitio */
+    font-family: 'Open Sans', sans-serif; /* Asegúrate de que la fuente coincida con el sitio */
 }
 
 /* Media Queries para Responsividad */
@@ -202,6 +180,11 @@ body {
 @media (max-width: 768px) {
 .container-header h1 {
     font-size: 2em;
+}
+
+.nombre-h1 {
+    letter-spacing: 0.5rem;
+    word-spacing: 5px;
 }
 
 .carrusel-container {
@@ -263,6 +246,11 @@ body {
     font-size: 1.8em;
 }
 
+.nombre-h1 {
+    letter-spacing: 0.25rem;
+    word-spacing: 3px;
+}
+
 .carrusel-img img {
     max-height: 60vh;
 }
@@ -280,6 +268,15 @@ body {
 .gallery-photo {
     max-width: 95%; /* Cambiar para que cada foto ocupe el ancho completo */
     margin: 0 auto; /* Centrar la imagen en el contenedor */
+}
+
+.gallery-photo-ocultas {
+    max-width: 95%; /* Cambiar para que cada foto ocupe el ancho completo */
+    margin: 0 auto; /* Centrar la imagen en el contenedor */
+}
+
+.gallery-photo-ocultas {
+    width: 95%; /* La imagen ocupa todo el ancho del contenedor */
 }
 
 .gallery-photo img {
