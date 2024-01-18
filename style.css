@@ -1,6 +1,6 @@
 /* Estilos Generales */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     margin: 0;
     padding: 0;
     color: #333; /* Cambiado a gris oscuro */
@@ -30,8 +30,8 @@ body {
 }
 
 .nombre-h1 {
-    letter-spacing: 1.3rem;
-    word-spacing: 3rem;
+    letter-spacing: 0.9rem;
+    word-spacing: 2.6rem;
 }
 
 /* Estilos del Carrusel */
@@ -172,7 +172,7 @@ body {
     font-size: 1.2em;
     padding: 10px 0;
     text-align: center; /* Centrar el contenido del footer */
-    font-family: 'Open Sans', sans-serif; /* Asegúrate de que la fuente coincida con el sitio */
+    font-family: 'PT Sans', sans-serif; /* Asegúrate de que la fuente coincida con el sitio */
 }
 
 /* Media Queries para Responsividad */
